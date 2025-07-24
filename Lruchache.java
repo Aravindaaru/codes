@@ -10,7 +10,7 @@ public class LRUApp {
 
         LRUCache cache = new LRUCache(capacity);
 
-        System.out.println("\n🧠 LRU Cache Console");
+        System.out.println("\n LRU Cache Console");
         System.out.println("Commands:");
         System.out.println("  put <key> <value>");
         System.out.println("  get <key>");
@@ -33,9 +33,9 @@ public class LRUApp {
                         int key = Integer.parseInt(parts[1]);
                         int value = Integer.parseInt(parts[2]);
                         cache.put(key, value);
-                        System.out.println("✅ Put done");
+                        System.out.println(" Put done");
                     } else {
-                        System.out.println("❌ Usage: put <key> <value>");
+                        System.out.println(" Usage: put <key> <value>");
                     }
                     break;
 
@@ -43,23 +43,23 @@ public class LRUApp {
                     if (parts.length == 2) {
                         int key = Integer.parseInt(parts[1]);
                         int value = cache.get(key);
-                        System.out.println("🔍 Value: " + value);
+                        System.out.println(" Value: " + value);
                     } else {
-                        System.out.println("❌ Usage: get <key>");
+                        System.out.println(" Usage: get <key>");
                     }
                     break;
 
                 case "display":
-                    System.out.println("📦 Cache Contents:");
+                    System.out.println(" Cache Contents:");
                     cache.display();
                     break;
 
                 case "exit":
-                    System.out.println("👋 Exiting...");
+                    System.out.println(" Exiting...");
                     return;
 
                 default:
-                    System.out.println("❓ Unknown command. Try: put, get, display, exit");
+                    System.out.println(" Unknown command. Try: put, get, display, exit");
             }
         }
     }
